@@ -26,8 +26,16 @@ public class Main {
             elevatorCabFirst.setFloor(i);
             System.out.println("Текущий этаж " + elevatorCabFirst.getFloor());
         }
+        floor.setCurrentStatusFirstCub(false);
+        elevatorCabFirst.setCondition(Condition.STANDCLOSEDOORS);
+        elevatorCabFirst.standCloseDoors();
+        elevatorCabFirst.pressDoorOpeningButton();
+        elevatorCabFirst.setCondition(Condition.OPENDOORS);
+        elevatorCabFirst.setCondition(Condition.STANDOPENDOORS);
+        elevatorCabFirst.sensorDetectsMovementBetweenDoors();
         elevatorCabFirst.sensorDetectsAbsenceMovementBetweenDoors();
-        floor.setCurrentStatusFirstCub(false); // в обратном порядке
+        elevatorCabFirst.setCondition(Condition.STANDCLOSEDOORS);
+        elevatorCabFirst.standCloseDoors();
 
         // Пассажир 2 вызывает лифт на 15 этаже и опускается на 1 этаж
         System.out.println("Пассажир 2 вызывает лифт на 15м этаже");
@@ -59,10 +67,15 @@ public class Main {
             elevatorCabSecond.setFloor(i);
             System.out.println("Текущий этаж " + elevatorCabSecond.getFloor());
         }
-        elevatorCabSecond.sensorDetectsAbsenceMovementBetweenDoors();
         floor.setCurrentStatusSecondCub(false);
-
-
-
+        elevatorCabSecond.setCondition(Condition.STANDCLOSEDOORS);
+        elevatorCabSecond.standCloseDoors();
+        elevatorCabSecond.pressDoorOpeningButton();
+        elevatorCabSecond.setCondition(Condition.OPENDOORS);
+        elevatorCabSecond.setCondition(Condition.STANDOPENDOORS);
+        elevatorCabSecond.sensorDetectsMovementBetweenDoors();
+        elevatorCabSecond.sensorDetectsAbsenceMovementBetweenDoors();
+        elevatorCabSecond.setCondition(Condition.STANDCLOSEDOORS);
+        elevatorCabSecond.standCloseDoors();
     }
 }

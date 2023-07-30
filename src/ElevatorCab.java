@@ -1,4 +1,3 @@
-
 public class ElevatorCab {
     private int floor;
     private Condition condition;
@@ -52,7 +51,7 @@ public class ElevatorCab {
         System.out.println("Лифт стоит с открытыми дверьми");
     }
 
-    public  void standCloseDoors() {
+    public void standCloseDoors() {
         System.out.println("Лифт стоит с закрытими дверьми");
     }
 

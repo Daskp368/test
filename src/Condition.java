@@ -6,7 +6,6 @@ public enum Condition {
     STANDOPENDOORS ("стоит с открытыми дверьми"),
     STANDCLOSEDOORS ("стоит с закрытыми дверьми");
 
-
     private final String title;
 
     Condition(String title) {

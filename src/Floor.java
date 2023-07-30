@@ -30,7 +30,6 @@ public class Floor {
     public byte getCurrentFloorSecondCub() {
         return currentFloorSecondCub;
     }
-
     public void setCurrentFloorSecondCub(byte currentFloorSecondCub) {
         this.currentFloorSecondCub = currentFloorSecondCub;
     }
